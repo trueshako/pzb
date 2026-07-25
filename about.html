@@ -1,846 +1,288 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About PZB | Protekt Ze Brand</title>
-<meta name="description" content="Learn about Protekt Ze Brand, a youth-led movement helping people protect their reputation, build their personal brand, and live with respect, integrity, purpose, and legacy.">
-<meta name="keywords" content="PZB, Protekt Ze Brand, about PZB, personal branding, leadership, youth empowerment, Dzaleka Refugee Camp, Malawi">
-<meta name="author" content="PZB - Protekt Ze Brand">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us — Protekt Ze Brand | Protektzebrand</title>
+    <meta name="description" content="The origin story of Protekt Ze Brand (Protektzebrand). Founded by Nathan Shako and Dan Mwamba. Discover our mission and global vision.">
+    <meta name="keywords" content="Protekt Ze Brand, Protektzebrand, PZB, Nathan Shako, Dan Mwamba, Brand Reputation, Fashion, Malawi">
+    
+    <!-- SEO Open Graph Tags -->
+    <meta property="og:title" content="About Us — Protekt Ze Brand">
+    <meta property="og:description" content="The origin story of Protekt Ze Brand (Protektzebrand). Founded by Nathan Shako and Dan Mwamba.">
+    <meta property="og:type" content="website">
 
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="PZB - Protekt Ze Brand">
-<meta property="og:title" content="About PZB - Protekt Ze Brand">
-<meta property="og:description" content="Your reputation is your brand. Protect it.">
-<meta property="og:image" content="pzb-logo.png">
-<meta property="og:url" content="https://pzb.driflare.com/about.html">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="About PZB - Protekt Ze Brand">
-<meta name="twitter:description" content="A youth-led movement built around respect, integrity, purpose, and legacy.">
-<meta name="twitter:image" content="pzb-logo.png">
-
-<link rel="icon" type="image/png" href="pzb-logo.png">
-<link rel="apple-touch-icon" href="pzb-logo.png">
-<link rel="canonical" href="https://pzb.driflare.com/about.html">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "AboutPage",
-  "@id": "https://pzb.driflare.com/about.html#about",
-  "url": "https://pzb.driflare.com/about.html",
-  "name": "About PZB - Protekt Ze Brand",
-  "description": "About Protekt Ze Brand, a youth-led movement founded in 2025 in Dzaleka Refugee Camp, Malawi.",
-  "about": {
-    "@type": "Organization",
-    "name": "Protekt Ze Brand",
-    "alternateName": "PZB",
-    "url": "https://pzb.driflare.com",
-    "logo": "https://pzb.driflare.com/pzb-logo.png",
-    "foundingDate": "2025",
-    "foundingLocation": {
-      "@type": "Place",
-      "name": "Dzaleka Refugee Camp, Malawi"
-    },
-    "founder": [
-      { "@type": "Person", "name": "Nathan Shako" },
-      { "@type": "Person", "name": "Dan Mwamba" }
-    ]
-  }
-}
-</script>
-
-<style>
-  :root{
-    --black:#0a0a0a;
-    --paper:#f3f1ec;
-    --paper-2:#eae7df;
-    --white:#ffffff;
-    --seal:#9a2b2b;
-    --gold:#c9a45d;
-    --ink-soft:#343434;
-    --line:rgba(10,10,10,0.14);
-  }
-
-  *{margin:0;padding:0;box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    background:var(--paper);
-    color:var(--black);
-    font-family:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    -webkit-font-smoothing:antialiased;
-    overflow-x:hidden;
-  }
-  ::selection{background:var(--black);color:var(--paper);}
-  a{color:inherit;text-decoration:none;}
-  img{display:block;max-width:100%;}
-  a:focus-visible, button:focus-visible{
-    outline:3px solid var(--seal);
-    outline-offset:3px;
-  }
-
-  .display{
-    font-family:'Anton', sans-serif;
-    font-weight:400;
-    text-transform:uppercase;
-    letter-spacing:0.01em;
-    line-height:0.92;
-  }
-  .mono{
-    font-family:'JetBrains Mono', monospace;
-    text-transform:uppercase;
-    letter-spacing:0.16em;
-  }
-  .wrap{
-    width:min(1180px, calc(100% - 64px));
-    margin:0 auto;
-  }
-
-  .nav{
-    position:fixed;
-    inset:0 0 auto;
-    z-index:50;
-    background:rgba(243,241,236,0.9);
-    border-bottom:1px solid var(--line);
-    backdrop-filter:blur(10px);
-  }
-  .nav-inner{
-    max-width:1180px;
-    margin:0 auto;
-    padding:18px 32px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:24px;
-  }
-  .nav-mark{
-    display:flex;
-    align-items:center;
-    gap:10px;
-  }
-  .nav-logo{
-    width:34px;
-    height:34px;
-    object-fit:contain;
-  }
-  .nav-mark span{
-    font-family:'Anton', sans-serif;
-    font-size:18px;
-    letter-spacing:0.06em;
-  }
-  .nav-links{
-    display:flex;
-    align-items:center;
-    gap:34px;
-  }
-  .nav-links a{
-    font-family:'JetBrains Mono', monospace;
-    font-size:12px;
-    letter-spacing:0.14em;
-    text-transform:uppercase;
-    opacity:0.72;
-    transition:opacity .2s ease;
-  }
-  .nav-links a:hover,
-  .nav-links a.active{opacity:1;}
-  .nav-cta{
-    background:var(--black);
-    color:var(--paper);
-    padding:10px 18px;
-    border:1px solid var(--black);
-    opacity:1 !important;
-    transition:background .2s ease,color .2s ease;
-  }
-  .nav-cta:hover{
-    background:transparent;
-    color:var(--black);
-  }
-  .nav-burger{
-    display:none;
-    width:40px;
-    height:40px;
-    border:0;
-    background:transparent;
-    cursor:pointer;
-    position:relative;
-  }
-  .nav-burger span{
-    position:absolute;
-    left:9px;
-    right:9px;
-    height:2px;
-    background:var(--black);
-    transition:transform .25s ease, opacity .25s ease, top .25s ease;
-  }
-  .nav-burger span:nth-child(1){top:13px;}
-  .nav-burger span:nth-child(2){top:20px;}
-  .nav-burger span:nth-child(3){top:27px;}
-  .nav-burger.open span:nth-child(1){top:20px;transform:rotate(45deg);}
-  .nav-burger.open span:nth-child(2){opacity:0;}
-  .nav-burger.open span:nth-child(3){top:20px;transform:rotate(-45deg);}
-  .drawer-overlay{
-    position:fixed;
-    inset:0;
-    z-index:55;
-    background:rgba(10,10,10,0.52);
-    opacity:0;
-    pointer-events:none;
-    transition:opacity .28s ease;
-  }
-  .drawer-overlay.open{
-    opacity:1;
-    pointer-events:auto;
-  }
-  .mobile-drawer{
-    position:fixed;
-    top:0;
-    right:0;
-    z-index:60;
-    width:min(78vw, 320px);
-    height:100vh;
-    background:var(--black);
-    color:var(--paper);
-    padding:96px 34px 38px;
-    transform:translateX(100%);
-    transition:transform .32s cubic-bezier(.2,.8,.2,1);
-    display:flex;
-    flex-direction:column;
-  }
-  .mobile-drawer.open{transform:translateX(0);}
-  .mobile-drawer a{
-    font-family:'Anton', sans-serif;
-    text-transform:uppercase;
-    font-size:24px;
-    padding:16px 0;
-    border-bottom:1px solid rgba(243,241,236,0.16);
-  }
-  .mobile-drawer .drawer-cta{
-    margin-top:24px;
-    border:1px solid var(--paper);
-    text-align:center;
-    font-family:'JetBrains Mono', monospace;
-    font-size:13px;
-    letter-spacing:0.12em;
-    padding:16px;
-  }
-
-  .hero{
-    min-height:92vh;
-    padding:150px 0 80px;
-    display:flex;
-    align-items:center;
-    position:relative;
-    overflow:hidden;
-  }
-  .hero::before{
-    content:'#PZB';
-    position:absolute;
-    left:50%;
-    top:52%;
-    transform:translate(-50%, -50%);
-    font-family:'Anton', sans-serif;
-    font-size:clamp(140px, 25vw, 360px);
-    color:rgba(10,10,10,0.045);
-    white-space:nowrap;
-    pointer-events:none;
-  }
-  .hero-grid{
-    position:relative;
-    display:grid;
-    grid-template-columns:1.08fr .92fr;
-    gap:64px;
-    align-items:center;
-  }
-  .eyebrow{
-    font-size:12px;
-    color:#595959;
-    margin-bottom:18px;
-  }
-  .hero h1{
-    font-size:clamp(58px, 10vw, 132px);
-    max-width:760px;
-  }
-  .hero-copy{
-    border-left:1px solid var(--line);
-    padding-left:34px;
-  }
-  .hero-copy p{
-    color:var(--ink-soft);
-    font-size:clamp(18px, 2vw, 23px);
-    line-height:1.58;
-    margin-bottom:30px;
-  }
-  .hero-actions{
-    display:flex;
-    flex-wrap:wrap;
-    gap:14px;
-  }
-  .btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    min-height:50px;
-    padding:15px 24px;
-    border:1px solid var(--black);
-    font-family:'JetBrains Mono', monospace;
-    font-size:12px;
-    letter-spacing:0.16em;
-    text-transform:uppercase;
-    transition:background .2s ease,color .2s ease, transform .2s ease;
-  }
-  .btn:hover{transform:translateY(-2px);}
-  .btn.primary{
-    background:var(--black);
-    color:var(--paper);
-  }
-  .btn.primary:hover{
-    background:transparent;
-    color:var(--black);
-  }
-
-  .identity-strip{
-    background:var(--black);
-    color:var(--paper);
-    padding:28px 0;
-    overflow:hidden;
-  }
-  .identity-track{
-    display:flex;
-    gap:28px;
-    justify-content:center;
-    flex-wrap:wrap;
-    font-size:12px;
-  }
-  .identity-track span{opacity:.84;}
-  .identity-track .dot{color:var(--gold);}
-
-  section{position:relative;}
-  .section-pad{padding:96px 0;}
-  .intro-grid{
-    display:grid;
-    grid-template-columns:.78fr 1.22fr;
-    gap:70px;
-    align-items:start;
-  }
-  .section-title{
-    font-size:clamp(34px, 5.2vw, 64px);
-  }
-  .body-copy p{
-    color:#2d2d2d;
-    font-size:18px;
-    line-height:1.78;
-    margin-bottom:22px;
-  }
-  .body-copy p:last-child{margin-bottom:0;}
-
-  .facts{
-    padding:0 0 104px;
-  }
-  .fact-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    border-top:1px solid var(--line);
-    border-left:1px solid var(--line);
-  }
-  .fact{
-    min-height:188px;
-    padding:28px 24px;
-    border-right:1px solid var(--line);
-    border-bottom:1px solid var(--line);
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-    background:rgba(255,255,255,0.16);
-  }
-  .fact strong{
-    font-family:'Anton', sans-serif;
-    text-transform:uppercase;
-    font-size:clamp(32px, 4vw, 52px);
-    line-height:.95;
-  }
-  .fact span{
-    color:#4b4b4b;
-    font-size:14px;
-    line-height:1.55;
-  }
-
-  .dark-panel{
-    background:var(--black);
-    color:var(--paper);
-    padding:104px 0;
-  }
-  .dark-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:68px;
-    align-items:center;
-  }
-  .dark-panel h2{
-    font-size:clamp(38px, 6vw, 78px);
-  }
-  .dark-panel p{
-    color:#c9c7bf;
-    font-size:18px;
-    line-height:1.76;
-    margin-bottom:22px;
-  }
-  .principles{
-    display:grid;
-    gap:12px;
-  }
-  .principle{
-    border:1px solid rgba(243,241,236,0.15);
-    padding:20px 22px;
-    display:grid;
-    grid-template-columns:auto 1fr;
-    gap:18px;
-    align-items:start;
-  }
-  .principle-num{
-    color:var(--gold);
-    font-size:12px;
-    padding-top:4px;
-  }
-  .principle h3{
-    font-family:'Anton', sans-serif;
-    text-transform:uppercase;
-    font-size:24px;
-    margin-bottom:6px;
-  }
-  .principle p{
-    font-size:15px;
-    line-height:1.58;
-    margin:0;
-  }
-
-  .founders{
-    padding:100px 0;
-  }
-  .founder-head{
-    display:flex;
-    justify-content:space-between;
-    gap:32px;
-    align-items:end;
-    margin-bottom:46px;
-  }
-  .founder-head h2{
-    font-size:clamp(36px,5.5vw,70px);
-  }
-  .founder-head p{
-    max-width:430px;
-    color:#454545;
-    line-height:1.7;
-    font-size:16px;
-  }
-  .founder-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:0;
-    border-top:1px solid var(--line);
-    border-left:1px solid var(--line);
-  }
-  .founder-card{
-    padding:38px;
-    border-right:1px solid var(--line);
-    border-bottom:1px solid var(--line);
-    min-height:270px;
-    background:rgba(255,255,255,0.18);
-  }
-  .founder-card .role{
-    color:#6b6b6b;
-    font-size:11px;
-    margin-bottom:18px;
-  }
-  .founder-card h3{
-    font-family:'Anton', sans-serif;
-    text-transform:uppercase;
-    font-size:38px;
-    margin-bottom:18px;
-  }
-  .founder-card p{
-    color:#333;
-    line-height:1.7;
-    font-size:16px;
-  }
-
-  .cta{
-    background:var(--paper-2);
-    padding:108px 0;
-    text-align:center;
-    border-top:1px solid var(--line);
-  }
-  .cta h2{
-    font-size:clamp(42px,7vw,86px);
-    margin-bottom:22px;
-  }
-  .cta p{
-    max-width:560px;
-    margin:0 auto 34px;
-    color:#383838;
-    font-size:18px;
-    line-height:1.7;
-  }
-  .cta-actions{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:14px;
-  }
-
-  .site-footer{
-    position:relative;
-    overflow:hidden;
-    background:var(--black);
-    color:var(--paper);
-    padding:66px 0 42px;
-    text-align:center;
-  }
-  .footer-watermark{
-    position:absolute;
-    inset:0;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    pointer-events:none;
-  }
-  .footer-watermark span{
-    font-family:'Anton', sans-serif;
-    font-size:clamp(110px, 23vw, 280px);
-    color:rgba(243,241,236,0.045);
-    filter:blur(1px);
-  }
-  .footer-content{position:relative;z-index:1;}
-  .footer-tag{
-    font-family:'Anton', sans-serif;
-    font-size:42px;
-    margin-bottom:24px;
-  }
-  .social-row{
-    display:flex;
-    justify-content:center;
-    gap:13px;
-    margin-bottom:32px;
-  }
-  .social-row a{
-    width:42px;
-    height:42px;
-    border-radius:50%;
-    background:var(--paper);
-    color:var(--black);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:800;
-    font-size:13px;
-    transition:transform .2s ease, background .2s ease, color .2s ease;
-  }
-  .social-row a:hover{
-    transform:translateY(-3px);
-    background:var(--gold);
-  }
-  .footer-bottom{
-    color:#b8b6ae;
-    font-size:11px;
-    line-height:1.8;
-  }
-  .footer-bottom a{
-    color:var(--paper);
-    border-bottom:1px solid rgba(243,241,236,.35);
-  }
-
-  .reveal{
-    opacity:0;
-    transform:translateY(18px);
-    transition:opacity .7s ease, transform .7s ease;
-  }
-  .reveal.in{
-    opacity:1;
-    transform:translateY(0);
-  }
-
-  @media (prefers-reduced-motion: reduce){
-    *{
-      animation-duration:0.001ms !important;
-      animation-iteration-count:1 !important;
-      scroll-behavior:auto !important;
-      transition-duration:0.001ms !important;
+    <!-- SEO Structured Data for Google Search -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Protekt Ze Brand",
+      "alternateName": ["Protektzebrand", "PZB"],
+      "logo": "second.png",
+      "founders": [
+        {"@type": "Person", "name": "Dan Mwamba"},
+        {"@type": "Person", "name": "Nathan Shako"}
+      ],
+      "foundingDate": "2025"
     }
-  }
-
-  @media (max-width:880px){
-    .hero-grid,
-    .intro-grid,
-    .dark-grid{
-      grid-template-columns:1fr;
-      gap:42px;
-    }
-    .hero{
-      min-height:auto;
-      padding-top:132px;
-    }
-    .hero-copy{
-      border-left:0;
-      padding-left:0;
-      max-width:680px;
-    }
-    .fact-grid{
-      grid-template-columns:repeat(2,1fr);
-    }
-    .founder-head{
-      display:block;
-    }
-    .founder-head p{
-      margin-top:18px;
-    }
-  }
-
-  @media (max-width:760px){
-    .nav-links{display:none;}
-    .nav-burger{display:block;}
-    .wrap{width:min(100% - 44px, 1180px);}
-    .hero h1{font-size:clamp(54px, 17vw, 86px);}
-    .section-pad,
-    .founders,
-    .dark-panel,
-    .cta{
-      padding:76px 0;
-    }
-    .founder-grid{
-      grid-template-columns:1fr;
-    }
-  }
-
-  @media (max-width:520px){
-    .nav-inner{padding:16px 22px;}
-    .nav-mark span{font-size:16px;}
-    .fact-grid{grid-template-columns:1fr;}
-    .fact{min-height:148px;}
-    .founder-card{padding:30px 24px;}
-    .hero-actions,
-    .cta-actions{
-      flex-direction:column;
-    }
-    .btn{width:100%;}
-  }
-</style>
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        black: '#0a0a0a',
+                        paper: '#f3f1ec',
+                        paper2: '#eae7df',
+                        seal: '#9a2b2b',
+                        line: 'rgba(10,10,10,0.14)',
+                    },
+                    fontFamily: {
+                        display: ['Anton', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    letterSpacing: {
+                        widest: '0.18em',
+                        display: '0.01em',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar and selection to match brand */
+        ::selection { background: #0a0a0a; color: #f3f1ec; }
+        body { background-color: #f3f1ec; color: #0a0a0a; }
+        
+        /* Reveal animation utility */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
+<body class="font-sans antialiased overflow-x-hidden selection:bg-black selection:text-paper">
 
-<body>
-<nav class="nav" aria-label="Main navigation">
-  <div class="nav-inner">
-    <a href="index.html#top" class="nav-mark" aria-label="PZB home">
-      <img src="pzb-logo.png" alt="PZB logo" class="nav-logo">
-      <span>PZB</span>
-    </a>
-    <div class="nav-links">
-      <a href="about.html" class="active">About</a>
-      <a href="index.html#mission">Mission</a>
-      <a href="index.html#standard">Standard</a>
-      <a href="index.html#founders">Founders</a>
-      <a href="index.html#pledge" class="nav-cta">Take the vow</a>
-    </div>
-    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-paper/90 backdrop-blur-md border-b border-line transition-all duration-300">
+        <div class="max-w-[1180px] mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-7 h-8 relative">
+                    <!-- LOGO PLACEHOLDER -->
+                    <svg class="w-full h-full group-hover:scale-105 transition-transform" viewBox="0 0 100 116" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M50 2 L96 16 V58 C96 88 76 104 50 114 C24 104 4 88 4 58 V16 Z" fill="#0a0a0a"/>
+                    </svg>
+                </div>
+                <span class="font-display text-xl tracking-display uppercase">PZB</span>
+            </a>
+            
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#" class="font-mono text-xs tracking-widest uppercase opacity-70 hover:opacity-100 transition-opacity">About</a>
+                <a href="#" class="font-mono text-xs tracking-widest uppercase opacity-70 hover:opacity-100 transition-opacity">Mission</a>
+                <a href="#" class="font-mono text-xs tracking-widest uppercase opacity-70 hover:opacity-100 transition-opacity">Founders</a>
+                <a href="#" class="bg-black text-paper px-5 py-2.5 font-mono text-[11px] tracking-widest uppercase border border-black hover:bg-transparent hover:text-black transition-colors">Take the standard</a>
+            </div>
 
-<div class="drawer-overlay" id="drawerOverlay"></div>
-<nav class="mobile-drawer" id="mobileDrawer" aria-label="Mobile navigation">
-  <a href="about.html">About</a>
-  <a href="index.html#mission">Mission</a>
-  <a href="index.html#standard">Standard</a>
-  <a href="index.html#founders">Founders</a>
-  <a href="index.html#pledge" class="drawer-cta">Take the vow</a>
-</nav>
-
-<main>
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div>
-        <div class="eyebrow mono reveal">About Protekt Ze Brand</div>
-        <h1 class="display reveal">Your name carries weight. Protect it.</h1>
-      </div>
-      <div class="hero-copy reveal">
-        <p>PZB is a youth-led movement built on a simple truth: your reputation is your brand, and your actions are the proof.</p>
-        <div class="hero-actions">
-          <a href="index.html#pledge" class="btn primary">Take the vow</a>
-          <a href="#story" class="btn">Read the story</a>
+            <button class="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5" aria-label="Menu">
+                <span class="w-6 h-0.5 bg-black"></span>
+                <span class="w-6 h-0.5 bg-black"></span>
+                <span class="w-6 h-0.5 bg-black"></span>
+            </button>
         </div>
-      </div>
-    </div>
-  </section>
+    </nav>
 
-  <section class="identity-strip" aria-label="PZB values">
-    <div class="wrap identity-track mono">
-      <span>Respect</span><span class="dot">/</span>
-      <span>Integrity</span><span class="dot">/</span>
-      <span>Purpose</span><span class="dot">/</span>
-      <span>Legacy</span><span class="dot">/</span>
-      <span>Personal Brand</span>
-    </div>
-  </section>
+    <main class="pt-32 pb-20">
+        <section class="max-w-[1180px] mx-auto px-6 pt-12 md:pt-24 pb-16 text-center reveal">
+            <div class="font-mono text-xs tracking-widest text-black/50 mb-6 uppercase">The Origin Story</div>
+            <h1 class="font-display text-5xl md:text-7xl lg:text-[100px] leading-[0.9] tracking-display uppercase mb-8">
+                How It All<br>Started
+            </h1>
+            <div class="flex items-center justify-center gap-4 mt-8 opacity-60">
+                <div class="h-px w-16 bg-black"></div>
+                <span class="font-display text-sm tracking-[0.4em] uppercase">2025 — Present</span>
+                <div class="h-px w-16 bg-black"></div>
+            </div>
+        </section>
 
-  <section class="section-pad" id="story">
-    <div class="wrap intro-grid">
-      <div>
-        <div class="eyebrow mono reveal">The story</div>
-        <h2 class="display section-title reveal">Built from standards, not slogans.</h2>
-      </div>
-      <div class="body-copy reveal">
-        <p>Protekt Ze Brand, also known as PZB, was founded in 2025 in Dzaleka Refugee Camp, Malawi, by Nathan Shako and Dan Mwamba.</p>
-        <p>The idea is bigger than a logo. PZB exists to help young people understand that reputation is built daily through discipline, respect, integrity, purpose, and the courage to choose better when nobody is watching.</p>
-        <p>We believe a personal brand is not only how people see you. It is how you show up, how you treat people, how you keep your word, and what kind of legacy you leave behind.</p>
-      </div>
-    </div>
-  </section>
+        <section class="max-w-[1180px] mx-auto px-6 py-16 md:py-24 border-t border-line">
+            <div class="grid md:grid-cols-2 gap-12 md:gap-24 items-center">
+                <div class="reveal">
+                    <h2 class="font-display text-4xl md:text-5xl uppercase mb-6">The Birth of PZB</h2>
+                    <p class="text-lg leading-relaxed text-black/80 mb-6">
+                        It was 2025. After passing our Junior Certificate Examinations (JCE) and entering Form 3, we realized something had to change. We looked back at our time in Form 1 and 2—admittedly, we were trouble makers. But as we stepped up as seniors, a realization hit.
+                    </p>
+                    <p class="text-lg leading-relaxed text-black/80 mb-6">
+                        My friend and co-founder, <strong>Dan Mwamba</strong>, had a visionary idea. He noticed that some people grow up without shedding their immature habits. Dan suggested that as future Form 4s, the school would soon give us the responsibility to take care of the lower classes. We had to get serious. We had to protect our reputation.
+                    </p>
+                    <blockquote class="border-l-4 border-black pl-6 py-2 my-8 font-serif text-xl italic text-black/90">
+                        "When students understood the word 'Brand', they understood what it meant: Reputation."
+                    </blockquote>
+                </div>
+                
+                <!-- YOUTUBE VIDEO EMBED PLACEHOLDER -->
+                <!-- To embed, simply replace this entire div below with your YouTube <iframe ...> code -->
+                <div class="reveal relative aspect-video bg-black rounded-2xl overflow-hidden border border-line flex flex-col items-center justify-center group shadow-xl">
+                    <svg class="w-16 h-16 text-red-600 mb-4 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24"><path d="M21.582,6.186c-0.23-0.86-0.908-1.538-1.768-1.768C18.254,4,12,4,12,4s-6.254,0-7.814,0.418 c-0.86,0.23-1.538,0.908-1.768,1.768C2,7.746,2,12,2,12s0,4.254,0.418,5.814c0.23,0.86,0.908,1.538,1.768,1.768 C5.746,20,12,20,12,20s6.254,0,7.814-0.418c0.86-0.23,1.538-0.908,1.768-1.768C22,16.254,22,12,22,12S22,7.746,21.582,6.186z M9.996,15.005V8.995L15.26,12L9.996,15.005z"/></svg>
+                    <span class="font-mono text-xs tracking-widest text-white/70 uppercase text-center px-6">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/bi_XfvbCAtU?si=sLRb27GVLAA8RbaL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </span>
+                </div>
+                <!-- END YOUTUBE VIDEO EMBED PLACEHOLDER -->
+            </div>
+        </section>
 
-  <section class="facts" aria-label="PZB facts">
-    <div class="wrap fact-grid">
-      <div class="fact reveal">
-        <strong>2025</strong>
-        <span>Founded with a focus on youth, leadership, and personal branding.</span>
-      </div>
-      <div class="fact reveal">
-        <strong>4</strong>
-        <span>Core pillars: respect, integrity, purpose, and legacy.</span>
-      </div>
-      <div class="fact reveal">
-        <strong>PZB</strong>
-        <span>Short for Protekt Ze Brand, a standard for how you live.</span>
-      </div>
-      <div class="fact reveal">
-        <strong>Global</strong>
-        <span>Born in Malawi with a message for anyone building their name.</span>
-      </div>
-    </div>
-  </section>
+        <section class="bg-black text-paper py-20 md:py-32">
+            <div class="max-w-[800px] mx-auto px-6">
+                <div class="reveal">
+                    <h2 class="font-display text-4xl md:text-5xl uppercase mb-6 text-center md:text-left">The Global Vision</h2>
+                    <p class="text-lg leading-relaxed text-paper/80 mb-6">
+                        I was curious and asked Dan about the meaning of "Protect the Brand." When he explained it, I completely fell in love with the idea and the name. Dan’s vision sparked something bigger in me. Many students wanted to join, but I believed it deserved to be a global company.
+                    </p>
+                    <p class="text-lg leading-relaxed text-paper/80 mb-6">
+                        In December 2025, I sat alone thinking about how to scale this. I have a habit of misspelling words to make them unique. I grabbed a notebook and began tweaking the original concept. 
+                    </p>
+                    <div class="bg-white/10 p-6 rounded-lg font-mono text-sm tracking-widest text-paper mb-6 border border-white/20">
+                        <div class="line-through text-paper/40 mb-2">PROTECT THE BRAND</div>
+                        <div class="line-through text-paper/40 mb-2">PROTECT ZE BRAND</div>
+                        <div class="text-white text-lg font-bold">PROTEKT ZE BRAND (PZB)</div>
+                    </div>
+                    <p class="text-lg leading-relaxed text-paper/80">
+                        I adopted the acronym "PZB", set up the social media accounts, and pitched the evolution to Dan. He loved it. 
+                    </p>
+                </div>
+            </div>
+        </section>
 
-  <section class="dark-panel" id="mission">
-    <div class="wrap dark-grid">
-      <div class="reveal">
-        <div class="eyebrow mono">What we stand for</div>
-        <h2 class="display">Protect the name before you promote it.</h2>
-      </div>
-      <div class="principles">
-        <div class="principle reveal">
-          <div class="principle-num mono">01</div>
-          <div>
-            <h3>Character</h3>
-            <p>We teach that influence starts with who you are when there is no audience.</p>
-          </div>
+        <section class="max-w-[1180px] mx-auto px-6 py-20 md:py-32">
+            <div class="text-center mb-16 reveal">
+                <div class="font-mono text-xs tracking-widest text-black/50 mb-4 uppercase">Visual Identity</div>
+                <h2 class="font-display text-4xl md:text-5xl uppercase">The Evolution of the Badge</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 md:gap-16">
+                <!-- First Logo -->
+                <div class="reveal flex flex-col items-center">
+                    <div class="w-full aspect-[4/3] bg-paper2 border border-line rounded-2xl flex items-center justify-center p-8 mb-6 overflow-hidden group">
+                        <img src="first.png" alt="Protekt Ze Brand (Protektzebrand) First Logo Concept" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="font-display text-xl uppercase mb-2">The First Draft</h3>
+                    <p class="text-center text-black/70 max-w-sm">Designed by ChatGPT initially. It held the spirit, but as we transitioned to "Protekt Ze Brand", we felt it looked a bit unrefined and cluttered.</p>
+                </div>
+
+                <!-- Second Logo -->
+                <div class="reveal flex flex-col items-center" style="transition-delay: 200ms;">
+                    <div class="w-full aspect-[4/3] bg-white border border-line rounded-2xl flex items-center justify-center p-8 mb-6 shadow-xl overflow-hidden group">
+                         <img src="pzb-logo.png" alt="Protekt Ze Brand (Protektzebrand) Official PZB Logo" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="font-display text-xl uppercase mb-2">The Current Standard</h3>
+                    <p class="text-center text-black/70 max-w-sm">We needed something bold and clean to represent the gravity of personal reputation. The new mark stands as our official badge of vow.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-paper2 border-y border-line py-20 md:py-32">
+            <div class="max-w-[1180px] mx-auto px-6 reveal text-center">
+                <div class="w-16 h-16 mx-auto mb-8 border-2 border-black rounded-full flex items-center justify-center">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h2 class="font-display text-4xl md:text-5xl uppercase mb-8">Building The Future</h2>
+                <p class="text-lg leading-relaxed text-black/80 max-w-3xl mx-auto mb-12">
+                    Dan and I sat down to figure out which unique domains PZB would conquer. We explored becoming a <strong>Fashion Brand</strong>, a <strong>Recording Label</strong>, and a <strong>Movie Production Company</strong>. 
+                </p>
+                <p class="text-lg leading-relaxed text-black/80 max-w-3xl mx-auto mb-12">
+                    By May 2026, we took our digital leap. Using Claude, we architected the full website for PZB, hosting it as a proud subdomain of Driflare. We are pouring our hearts into creating the best project ever with Protekt Ze Brand.
+                </p>
+
+                <!-- Driflare mention banner -->
+                <div class="inline-flex items-center gap-4 bg-black text-paper px-8 py-4 rounded-full border border-black hover:bg-transparent hover:text-black transition-colors cursor-pointer group">
+                    <span class="font-mono text-xs tracking-widest uppercase">Powered by Driflare</span>
+                    <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-black text-paper py-16 relative overflow-hidden text-center">
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-5">
+            <span class="font-display text-[150px] md:text-[240px] whitespace-nowrap blur-[2px]">#PZB</span>
         </div>
-        <div class="principle reveal">
-          <div class="principle-num mono">02</div>
-          <div>
-            <h3>Growth</h3>
-            <p>We encourage young people to build skills in leadership, creativity, business, and digital innovation.</p>
-          </div>
+        
+        <div class="relative z-10 max-w-[1180px] mx-auto px-6">
+            <h2 class="font-display text-3xl md:text-4xl uppercase mb-10 text-shadow-sm">Follow The Standard</h2>
+            
+            <div class="flex flex-wrap items-center justify-center gap-6 mb-16">
+                <!-- Instagram -->
+                <a href="https://instagram.com/protektzebrand" target="_blank" rel="noopener" class="w-14 h-14 rounded-full bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-500 flex items-center justify-center hover:-translate-y-1 hover:shadow-lg hover:shadow-purple-500/30 transition-all">
+                    <svg class="w-6 h-6 fill-white" viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.06 1.97.24 2.43.42.61.24 1.05.52 1.5.97.46.46.74.9.98 1.5.18.46.36 1.26.42 2.43.07 1.25.07 1.65.07 4.85s0 3.6-.07 4.85c-.06 1.17-.24 1.97-.42 2.43-.24.61-.52 1.05-.97 1.5-.46.46-.9.74-1.5.98-.46.18-1.27.36-2.44.42-1.25.07-1.65.07-4.85.07s-3.6 0-4.85-.07c-1.17-.06-1.97-.24-2.43-.42-.61-.24-1.05-.52-1.5-.97a4.1 4.1 0 0 1-.98-1.5c-.18-.46-.36-1.27-.42-2.44-.07-1.25-.07-1.65-.07-4.85s0-3.6.07-4.85c.06-1.17.24-1.97.42-2.43.24-.61.52-1.05.97-1.5a4.1 4.1 0 0 1 1.5-.98c.46-.18 1.26-.36 2.43-.42C8.4 2.2 8.8 2.2 12 2.2Zm0 1.98c-3.15 0-3.52 0-4.76.07-1.06.05-1.6.21-1.98.36-.5.19-.85.42-1.22.79-.37.37-.6.72-.79 1.22-.15.38-.31.92-.36 1.97-.07 1.25-.07 1.62-.07 4.76s0 3.52.07 4.76c.05 1.06.21 1.6.36 1.98.19.5.42.85.79 1.22.37.37.72.6 1.22.79.38.15.92.31 1.98.36 1.24.07 1.61.07 4.76.07s3.52 0 4.76-.07c1.06-.05 1.6-.21 1.97-.36.5-.19.86-.42 1.22-.79.37-.37.6-.72.79-1.22.15-.38.31-.92.36-1.98.07-1.24.07-1.61.07-4.76s0-3.52-.07-4.76c-.05-1.06-.21-1.6-.36-1.97-.19-.5-.42-.86-.79-1.22a3.3 3.3 0 0 0-1.22-.79c-.38-.15-.91-.31-1.97-.36-1.25-.07-1.62-.07-4.77-.07Z"/><path d="M12 7.13a4.87 4.87 0 1 0 0 9.74 4.87 4.87 0 0 0 0-9.74Zm0 8.04a3.17 3.17 0 1 1 0-6.34 3.17 3.17 0 0 1 0 6.34Z"/><circle cx="17.1" cy="6.9" r="1.14"/></svg>
+                </a>
+                
+                <!-- Twitter / X -->
+                <a href="https://x.com/protektzebrand" target="_blank" rel="noopener" class="w-14 h-14 rounded-full bg-black border border-white/20 flex items-center justify-center hover:-translate-y-1 hover:bg-white hover:text-black transition-all group">
+                    <svg class="w-5 h-5 fill-white group-hover:fill-black transition-colors" viewBox="0 0 24 24"><path d="M13.64 10.6 20.6 2.5h-1.65l-6.04 7.02L7.99 2.5H2.5l7.3 10.62L2.5 21.5h1.65l6.38-7.42 5.1 7.42h5.47l-7.46-10.9Zm-2.26 2.63-.74-1.06L4.76 3.72h2.54l4.74 6.78.74 1.06 6.16 8.81H16.4l-5.02-7.74Z"/></svg>
+                </a>
+
+                <!-- Facebook -->
+                <a href="https://facebook.com/protektzebrand" target="_blank" rel="noopener" class="w-14 h-14 rounded-full bg-[#1877F2] flex items-center justify-center hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/30 transition-all">
+                     <svg class="w-6 h-6 fill-white" viewBox="0 0 24 24"><path d="M14.5 21.5v-7.7h2.6l.4-3h-3v-1.93c0-.87.24-1.46 1.49-1.46h1.6V4.74c-.28-.04-1.22-.12-2.33-.12-2.3 0-3.88 1.4-3.88 3.98v2.2H8.75v3h2.63v7.7h3.12Z"/></svg>
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://linkedin.com/company/protektzebrand" target="_blank" rel="noopener" class="w-14 h-14 rounded-full bg-[#0A66C2] flex items-center justify-center hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-600/30 transition-all">
+                     <svg class="w-6 h-6 fill-white" viewBox="0 0 24 24"><path d="M5.34 3.5a2.16 2.16 0 1 1 0 4.32 2.16 2.16 0 0 1 0-4.32ZM3.36 9.18h3.96V20.5H3.36V9.18Zm6.7 0h3.8v1.55h.05c.53-1 1.82-2.06 3.74-2.06 4 0 4.74 2.63 4.74 6.05V20.5h-3.96v-5.4c0-1.29-.02-2.94-1.79-2.94-1.8 0-2.08 1.4-2.08 2.85v5.49h-3.96V9.18Z"/></svg>
+                </a>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 font-mono text-[10px] md:text-xs tracking-widest text-paper/50 uppercase">
+                &copy; 2026 Protekt Ze Brand. Powered by <a href="#" class="text-[#c9a45d] hover:text-white transition-colors border-b border-[#c9a45d]/40 hover:border-white">Driflare</a>.
+            </div>
         </div>
-        <div class="principle reveal">
-          <div class="principle-num mono">03</div>
-          <div>
-            <h3>Community</h3>
-            <p>We create a culture where people challenge each other to live with higher standards.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </footer>
 
-  <section class="founders" id="founders">
-    <div class="wrap">
-      <div class="founder-head">
-        <div>
-          <div class="eyebrow mono reveal">The founders</div>
-          <h2 class="display reveal">Two voices. One standard.</h2>
-        </div>
-        <p class="reveal">PZB was started by people who believe young people do not have to wait for permission to build something meaningful.</p>
-      </div>
-      <div class="founder-grid">
-        <article class="founder-card reveal">
-          <div class="role mono">Founder &amp; CEO</div>
-          <h3>Dan Mwamba</h3>
-          <p>Dan Mwamba is the visionary founder of PZB and the leadership voice behind its standard. His insight about reputation and character became the seed of the movement.</p>
-        </article>
-        <article class="founder-card reveal">
-          <div class="role mono">Co-Founder</div>
-          <h3>Nathan Shako</h3>
-          <p>Nathan Shako supports the movement as a co-founder, bringing technology, storytelling, and digital strategy to help turn the PZB vision into a growing global identity.</p>
-        </article>
-      </div>
-    </div>
-  </section>
+    <script>
+        // Simple Intersection Observer for scroll reveals
+        document.addEventListener("DOMContentLoaded", () => {
+            const reveals = document.querySelectorAll('.reveal');
+            
+            const revealOptions = {
+                threshold: 0.15,
+                rootMargin: "0px 0px -50px 0px"
+            };
 
-  <section class="cta">
-    <div class="wrap">
-      <h2 class="display reveal">Be your standard.</h2>
-      <p class="reveal">The brand you protect is not just a name. It is the trust people can place in you after seeing how you live.</p>
-      <div class="cta-actions reveal">
-        <a href="index.html#pledge" class="btn primary">Take the PZB vow</a>
-        <a href="mailto:hello@protektzebrand.com" class="btn">Get in touch</a>
-      </div>
-    </div>
-  </section>
-</main>
+            const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    } else {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, revealOptions);
 
-<footer class="site-footer">
-  <div class="footer-watermark" aria-hidden="true"><span>#PZB</span></div>
-  <div class="wrap footer-content">
-    <div class="footer-tag">#PZB</div>
-    <div class="social-row" aria-label="Social media links">
-      <a href="https://instagram.com/protektzebrand" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
-      <a href="https://github.com/trueshako" target="_blank" rel="noopener" aria-label="GitHub">GH</a>
-      <a href="https://youtube.com/@trueshako" target="_blank" rel="noopener" aria-label="YouTube">YT</a>
-      <a href="mailto:hello@protektzebrand.com" aria-label="Email">EM</a>
-    </div>
-    <div class="footer-bottom mono">© 2026 PZB - PROTEKT ZE BRAND · Built by <a href="https://driflare.com" target="_blank" rel="noopener">Driflare</a></div>
-  </div>
-</footer>
-
-<script>
-  const revealEls = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(entry=>{
-      if(entry.isIntersecting){
-        entry.target.classList.add('in');
-        io.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.16 });
-  revealEls.forEach(el=>io.observe(el));
-
-  const navBurger = document.getElementById('navBurger');
-  const mobileDrawer = document.getElementById('mobileDrawer');
-  const drawerOverlay = document.getElementById('drawerOverlay');
-
-  function closeDrawer(){
-    navBurger.classList.remove('open');
-    navBurger.setAttribute('aria-expanded','false');
-    mobileDrawer.classList.remove('open');
-    drawerOverlay.classList.remove('open');
-    document.body.style.overflow = '';
-  }
-
-  function openDrawer(){
-    navBurger.classList.add('open');
-    navBurger.setAttribute('aria-expanded','true');
-    mobileDrawer.classList.add('open');
-    drawerOverlay.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-
-  navBurger.addEventListener('click', ()=>{
-    mobileDrawer.classList.contains('open') ? closeDrawer() : openDrawer();
-  });
-  drawerOverlay.addEventListener('click', closeDrawer);
-  mobileDrawer.querySelectorAll('a').forEach(link=>link.addEventListener('click', closeDrawer));
-  window.addEventListener('resize', ()=>{ if(window.innerWidth > 760) closeDrawer(); });
-</script>
+            reveals.forEach(reveal => {
+                revealOnScroll.observe(reveal);
+            });
+            
+            // Trigger first items immediately
+            setTimeout(() => {
+                reveals.forEach((reveal, idx) => {
+                    if (idx < 2) reveal.classList.add('active');
+                });
+            }, 100);
+        });
+    </script>
 </body>
 </html>
