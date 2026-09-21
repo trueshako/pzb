@@ -132,7 +132,7 @@
 
           "sameAs": [
             "https://linkedin.com/in/truemwamba",
-            "https://web.facebook.com/truemwamba"
+            "https://web.facebook.com/truemwamba",
             "https://instagram.com/truemwamba"
           ]
         }
@@ -140,9 +140,9 @@
       ],
 
       "sameAs": [
-        "https://instagram.com/protektzebrand"
-          "https://facebook.com/protektzebrand"
-          "https://x.com/protektzebrand"
+        "https://instagram.com/protektzebrand",
+        "https://facebook.com/protektzebrand",
+        "https://x.com/protektzebrand"
       ]
     },
 
@@ -1436,6 +1436,154 @@
     opacity:1;
     transform:translateY(0);
   }
+
+  /* ---------- PZB 2.0: floating glass interface ---------- */
+  :root{
+    --glass-light:rgba(255,255,255,0.58);
+    --glass-dark:rgba(12,12,12,0.7);
+    --glass-border:rgba(255,255,255,0.68);
+    --glass-shadow:0 18px 48px rgba(10,10,10,0.14), 0 2px 10px rgba(10,10,10,0.06);
+  }
+  body::before{
+    content:'';
+    position:fixed;
+    width:42vw;
+    height:42vw;
+    min-width:360px;
+    min-height:360px;
+    top:-20vw;
+    right:-15vw;
+    border-radius:50%;
+    background:radial-gradient(circle, rgba(154,43,43,0.11), transparent 68%);
+    filter:blur(8px);
+    pointer-events:none;
+    z-index:-1;
+  }
+  .nav{background:transparent;border:0;pointer-events:none;}
+  .nav-inner{
+    width:min(980px, calc(100% - 32px));
+    min-height:62px;
+    margin:14px auto 0;
+    padding:10px 14px 10px 18px;
+    border:1px solid var(--glass-border);
+    border-radius:24px;
+    background:var(--glass-light);
+    box-shadow:var(--glass-shadow);
+    backdrop-filter:blur(22px) saturate(145%);
+    -webkit-backdrop-filter:blur(22px) saturate(145%);
+    pointer-events:auto;
+    transition:width .5s cubic-bezier(.16,1,.3,1), min-height .5s cubic-bezier(.16,1,.3,1), margin .5s cubic-bezier(.16,1,.3,1), border-radius .5s ease, box-shadow .35s ease;
+    animation:navArrival .8s cubic-bezier(.16,1,.3,1) both;
+  }
+  .nav.compact .nav-inner{
+    width:min(760px, calc(100% - 32px));
+    min-height:50px;
+    margin-top:9px;
+    border-radius:20px;
+    box-shadow:0 12px 34px rgba(10,10,10,0.17);
+  }
+  @keyframes navArrival{from{opacity:0;transform:translateY(-34px) scale(.88)}to{opacity:1;transform:translateY(0) scale(1)}}
+  .nav.compact .nav-mark span{font-size:16px;}
+  .nav-mark{transition:transform .45s cubic-bezier(.16,1,.3,1);}
+  .nav.compact .nav-mark{transform:scale(.92);transform-origin:left center;}
+  .nav-links{gap:clamp(13px, 2vw, 28px);}
+  .nav-links a{opacity:.68;transition:opacity .2s ease, transform .25s cubic-bezier(.16,1,.3,1);}
+  .nav-links a:not(.nav-cta):hover{opacity:1;transform:translateY(-1px);}
+  .nav-cta, .cta-btn, .pledge-btn, .badge-actions button, .drawer-cta{
+    border-radius:999px !important;
+    backdrop-filter:blur(16px) saturate(140%);
+    -webkit-backdrop-filter:blur(16px) saturate(140%);
+    box-shadow:0 7px 20px rgba(10,10,10,0.14), inset 0 1px 0 rgba(255,255,255,0.28);
+    transition:transform .28s cubic-bezier(.16,1,.3,1), background .28s ease, box-shadow .28s ease, color .28s ease !important;
+  }
+  .nav-cta{
+    background:rgba(10,10,10,.82);
+    border-color:rgba(255,255,255,.2);
+    padding:10px 16px;
+  }
+  .nav-cta:hover, .cta-btn:hover, .pledge-btn:hover, .badge-actions button:hover{
+    transform:translateY(-2px) scale(1.025);
+    box-shadow:0 12px 26px rgba(10,10,10,.2), inset 0 1px 0 rgba(255,255,255,0.32);
+  }
+  .cta-btn{background:rgba(243,241,236,.84);border-color:rgba(255,255,255,.6);}
+  .pledge-btn{background:rgba(10,10,10,.86);border:1px solid rgba(255,255,255,.15);}
+  .badge-actions button{background:rgba(255,255,255,.62);border-color:rgba(10,10,10,.13);}
+  .badge-actions button.primary{background:rgba(10,10,10,.88);}
+  .nav-burger{
+    border-radius:17px;
+    background:rgba(255,255,255,.42);
+    border:1px solid rgba(10,10,10,.1);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.68);
+    backdrop-filter:blur(12px);
+  }
+  .faq-q{
+    margin:8px 0;
+    padding:19px 18px;
+    border:1px solid rgba(10,10,10,.1);
+    border-radius:18px;
+    background:rgba(255,255,255,.42);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.62);
+    backdrop-filter:blur(12px);
+    transition:transform .25s cubic-bezier(.16,1,.3,1), background .25s ease;
+  }
+  .faq-q:hover{transform:translateY(-2px);background:rgba(255,255,255,.68);}
+  .faq-item{border-bottom:0;}
+  .faq-a p{padding:8px 18px 20px;}
+  .hero{isolation:isolate;}
+  .hero::before{
+    content:'PZB';
+    position:absolute;
+    z-index:-1;
+    left:50%; top:50%;
+    transform:translate(-50%,-42%);
+    font-family:'Anton',sans-serif;
+    font-size:clamp(180px, 35vw, 520px);
+    letter-spacing:-.08em;
+    color:rgba(10,10,10,.035);
+    line-height:.8;
+    pointer-events:none;
+  }
+  .hero-mark{animation:dropIn .9s cubic-bezier(.16,1,.3,1) forwards, heroFloat 5s ease-in-out 1s infinite;}
+  @keyframes heroFloat{50%{transform:translateY(-8px) rotate(1deg)}}
+  .pillar, .vig{transition:transform .35s cubic-bezier(.16,1,.3,1), background .35s ease, box-shadow .35s ease;}
+  .pillar:hover, .vig:hover{transform:translateY(-7px);box-shadow:0 20px 40px rgba(10,10,10,.09);}
+
+  /* ---------- visual PZB journey ---------- */
+  .journey{padding:110px 0;background:#111;color:var(--paper);overflow:hidden;position:relative;}
+  .journey::before{content:'ARCHIVE';position:absolute;right:-.06em;top:-.18em;font-family:'Anton',sans-serif;font-size:clamp(110px,20vw,280px);color:rgba(255,255,255,.035);line-height:1;pointer-events:none;}
+  .journey-head{max-width:630px;margin-bottom:56px;position:relative;}
+  .journey .eyebrow{color:#c9a45d;font-size:12px;margin-bottom:18px;}
+  .journey h2{font-size:clamp(38px,6.5vw,72px);margin-bottom:18px;}
+  .journey-head p{line-height:1.7;color:rgba(243,241,236,.7);font-size:17px;}
+  .journey-track{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.18);position:relative;}
+  .journey-track::before{content:'';position:absolute;top:-1px;left:0;width:var(--journey-progress, 0%);height:2px;background:#c9a45d;transition:width 1.2s cubic-bezier(.16,1,.3,1);}
+  .journey-card{min-height:290px;padding:30px 24px 26px;border-right:1px solid rgba(255,255,255,.14);position:relative;overflow:hidden;}
+  .journey-card:first-child{border-left:1px solid rgba(255,255,255,.14);}
+  .journey-card::before{content:'';position:absolute;width:10px;height:10px;border:2px solid #c9a45d;border-radius:50%;background:#111;top:-6px;left:24px;transition:background .35s ease,transform .35s ease;}
+  .journey-card:hover::before{background:#c9a45d;transform:scale(1.35);}
+  .journey-year{display:block;color:#c9a45d;font-size:11px;margin-bottom:46px;}
+  .journey-card h3{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:28px;line-height:1;margin-bottom:14px;}
+  .journey-card p{font-size:14px;line-height:1.7;color:rgba(243,241,236,.65);}
+  .journey-index{position:absolute;bottom:22px;right:22px;font-family:'Anton',sans-serif;font-size:58px;color:rgba(255,255,255,.08);}
+  .journey-card{transition:background .35s ease,transform .35s cubic-bezier(.16,1,.3,1);}
+  .journey-card:hover{background:rgba(255,255,255,.055);transform:translateY(-8px);}
+  .badge-shield{border-radius:18px;overflow:hidden;background:rgba(255,255,255,.06);padding:5px;box-shadow:0 0 0 1px rgba(201,164,93,.55),0 0 24px rgba(201,164,93,.2)}
+  .badge-shield img{width:100%;height:100%;object-fit:contain}
+  @media (max-width:800px){.journey-track{grid-template-columns:repeat(2,1fr)}.journey-card:nth-child(3){border-left:1px solid rgba(255,255,255,.14);}.journey-card{min-height:240px}}
+  @media (max-width:520px){.wrap{padding:0 20px}.nav-inner{width:calc(100% - 20px);margin-top:10px;padding:8px 10px 8px 14px}.nav.compact .nav-inner{width:calc(100% - 20px)}.journey{padding:82px 0}.journey-track{grid-template-columns:1fr}.journey-card,.journey-card:nth-child(3){border-left:1px solid rgba(255,255,255,.14)}.journey-card{min-height:205px}.hero{padding-top:132px}}
+  @media (max-width:760px){
+    .nav-inner{border-radius:22px;box-shadow:0 14px 32px rgba(10,10,10,.16)}
+    .nav-burger{transition:transform .32s cubic-bezier(.16,1,.3,1),background .32s ease;}
+    .nav-burger.open{transform:rotate(90deg) scale(1.05);background:rgba(10,10,10,.88)}
+    .nav-burger.open span{background:var(--paper)}
+    .mobile-drawer{top:78px;right:10px;width:calc(100% - 20px);height:auto;min-height:0;padding:14px;border:1px solid rgba(255,255,255,.18);border-radius:28px;background:rgba(14,14,14,.86);box-shadow:0 25px 60px rgba(0,0,0,.35);backdrop-filter:blur(22px);transform:translateY(-24px) scale(.93);opacity:0;visibility:hidden;transition:transform .45s cubic-bezier(.16,1,.3,1),opacity .3s ease,visibility .3s;}
+    .mobile-drawer.open{transform:translateY(0) scale(1);opacity:1;visibility:visible}
+    .mobile-drawer a{padding:17px 12px;font-size:25px;animation:none}
+    .mobile-drawer.open a{animation:mobileLink .45s cubic-bezier(.16,1,.3,1) both}
+    .mobile-drawer.open a:nth-child(2){animation-delay:.05s}.mobile-drawer.open a:nth-child(3){animation-delay:.1s}.mobile-drawer.open a:nth-child(4){animation-delay:.15s}.mobile-drawer.open a:nth-child(5){animation-delay:.2s}.mobile-drawer.open a:nth-child(6){animation-delay:.25s}
+    .drawer-overlay{backdrop-filter:blur(4px)}
+  }
+  @keyframes mobileLink{from{opacity:0;transform:translateX(20px)}to{opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -1454,10 +1602,10 @@
       <span>PZB</span>
     </a>
     <div class="nav-links">
-      <a href="about.html">About</a>
-      <a href="#mission">Mission</a>
+      <a href="/about">About</a>
+      <a href="/mission">Mission</a>
+      <a href="/timeline">Timeline</a>
       <a href="#founders">Founders</a>
-      <a href="#pledge">Badge of Vow</a>
       <a href="#faq">FAQ</a>
       <a href="#join" class="nav-cta">Take the standard</a>
     </div>
@@ -1470,11 +1618,11 @@
 
 <div class="drawer-overlay" id="drawerOverlay"></div>
 <nav class="mobile-drawer" id="mobileDrawer" aria-label="Mobile navigation">
-  <a href="about.html">About</a>
-  <a href="#mission">Mission</a>
+  <a href="/about">About</a>
+  <a href="/mission">Mission</a>
+  <a href="/timeline">Timeline</a>
   <a href="#founders">Founders</a>
   <a href="#action">In Action</a>
-  <a href="#pledge">Badge of Vow</a>
   <a href="#faq">FAQ</a>
   <a href="#join" class="drawer-cta mono">Take the standard</a>
 </nav>
@@ -1547,6 +1695,43 @@
       <h2 class="display">The story behind PZB</h2>
       <p>PZB started as a conversation between two friends, Dan Mwamba and Nathan Shako, about something they kept seeing: people chasing image while quietly letting their character slide. Followers, titles, and applause were treated like the brand itself — when really, those things are just the reflection.</p>
       <p>They built PZB on a simpler idea. Your reputation isn't manufactured in public — it's earned in private, in the choices nobody applauds and nobody punishes. The brand you're protecting was never the logo. It's you.</p>
+    </div>
+  </section>
+
+  <!-- PZB JOURNEY -->
+  <section class="journey" id="journey">
+    <div class="wrap">
+      <div class="journey-head reveal">
+        <div class="eyebrow mono">The PZB archive</div>
+        <h2 class="display">A standard<br>in motion.</h2>
+        <p>Every movement begins with a decision. This is the growing record of how PZB turns that decision into a community, a culture, and a legacy.</p>
+      </div>
+      <div class="journey-track" data-journey>
+        <article class="journey-card reveal">
+          <span class="journey-year mono">01 — 2025</span>
+          <h3>The idea</h3>
+          <p>A conversation about reputation becomes a shared standard: character first, always.</p>
+          <span class="journey-index">01</span>
+        </article>
+        <article class="journey-card reveal">
+          <span class="journey-year mono">02 — 2025</span>
+          <h3>PZB is born</h3>
+          <p>Protekt Ze Brand gets its name, its badge, and a clear purpose beyond the classroom.</p>
+          <span class="journey-index">02</span>
+        </article>
+        <article class="journey-card reveal">
+          <span class="journey-year mono">03 — NOW</span>
+          <h3>Take the vow</h3>
+          <p>People can carry the four pillars—respect, integrity, purpose, and legacy—into real life.</p>
+          <span class="journey-index">03</span>
+        </article>
+        <article class="journey-card reveal">
+          <span class="journey-year mono">04 — NEXT</span>
+          <h3>Build legacy</h3>
+          <p>More stories, more collaborators, and more young people choosing to set their own standard.</p>
+          <span class="journey-index">04</span>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -1767,11 +1952,7 @@
             <div class="badge-sheen"></div>
 
             <div class="badge-shield">
-              <svg viewBox="0 0 100 116" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M50 2 L96 16 V58 C96 88 76 104 50 114 C24 104 4 88 4 58 V16 Z" fill="#c9a45d"/>
-                <path d="M50 2 L96 16 V58 C96 88 76 104 50 114 C24 104 4 88 4 58 V16 Z" fill="#0a0a0a" fill-opacity="0.88" transform="scale(0.93)" transform-origin="50 58"/>
-                <text x="50" y="68" text-anchor="middle" font-family="Anton" font-size="34" fill="#c9a45d">PZB</text>
-              </svg>
+              <img src="pzb-logo.png" alt="PZB logo">
             </div>
 
             <div class="badge-eyebrow mono">Certified Member</div>
@@ -1945,15 +2126,29 @@
 
   // scroll progress bar
   const progressBar = document.getElementById('scrollProgress');
+  const siteNav = document.querySelector('.nav');
   function updateProgress(){
     const h = document.documentElement;
     const scrolled = h.scrollTop;
     const max = h.scrollHeight - h.clientHeight;
     const pct = max > 0 ? (scrolled / max) * 100 : 0;
     progressBar.style.width = pct + '%';
+    siteNav.classList.toggle('compact', scrolled > 36);
   }
   window.addEventListener('scroll', updateProgress, { passive:true });
   updateProgress();
+
+  // Fill the journey line only when its story comes into view.
+  const journeyTrack = document.querySelector('[data-journey]');
+  if(journeyTrack){
+    const journeyObserver = new IntersectionObserver((entries)=>{
+      if(entries[0].isIntersecting){
+        journeyTrack.style.setProperty('--journey-progress', '100%');
+        journeyObserver.unobserve(journeyTrack);
+      }
+    }, { threshold:0.25 });
+    journeyObserver.observe(journeyTrack);
+  }
 
   // pledge / badge of vow interactivity
   const pledgeItems = document.querySelectorAll('[data-item]');
