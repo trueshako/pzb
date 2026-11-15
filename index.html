@@ -5,28 +5,118 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>PZB — Something Big Is Coming</title>
-  <meta name="description" content="Protekt Ze Brand is building something big. A new chapter is coming. Stay tuned.">
+  <!-- =====================================
+       PZB | PROTEKT ZE BRAND
+       OFFICIAL WEBSITE
+  ====================================== -->
+
+  <title>PZB — PZB Studios | Protekt Ze Brand</title>
+
+  <meta name="description" content="Welcome to PZB, also known as Protekt Ze Brand. PZB Studios is our creative studio identity. We are currently undergoing reinnovation, rebuilding our vision and working to create greater value. A new chapter is coming.">
+
+  <meta name="keywords" content="PZB, PZB Studios, Protekt Ze Brand, ProtektZeBrand, #PZB, #ProtektZeBrand, #PZBstudios">
+
+  <meta name="author" content="Protekt Ze Brand">
+  <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#ffffff">
 
-  <!-- PZB Logo & Favicon -->
+  <link rel="canonical" href="https://pzb.driflare.com/">
+
+  <!-- Favicon -->
   <link rel="icon" type="image/png"
     href="https://raw.githubusercontent.com/trueshako/pzb/main/pzb-logo.png">
+
   <link rel="apple-touch-icon"
     href="https://raw.githubusercontent.com/trueshako/pzb/main/pzb-logo.png">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pzb.driflare.com/">
+  <meta property="og:site_name" content="PZB">
+  <meta property="og:title" content="PZB — PZB Studios | Protekt Ze Brand">
+  <meta property="og:description" content="PZB is currently undergoing reinnovation. We are rethinking, rebuilding and working towards a stronger future. Discover the next chapter of Protekt Ze Brand.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/trueshako/pzb/main/pzb-logo.png">
+  <meta property="og:image:alt" content="PZB — Protekt Ze Brand">
+
+  <!-- X / Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="PZB — PZB Studios">
+  <meta name="twitter:description" content="A new chapter is taking shape. PZB is undergoing reinnovation.">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/trueshako/pzb/main/pzb-logo.png">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+  <!-- =====================================
+       STRUCTURED DATA: ORGANIZATION
+  ====================================== -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://pzb.driflare.com/#organization",
+    "name": "PZB",
+    "alternateName": [
+      "Protekt Ze Brand",
+      "PZB Studios",
+      "ProtektZeBrand"
+    ],
+    "url": "https://pzb.driflare.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://raw.githubusercontent.com/trueshako/pzb/main/pzb-logo.png"
+    },
+    "description": "PZB, also known as Protekt Ze Brand, is an independent brand currently undergoing reinnovation and development. PZB Studios is its creative studio identity, focused on building creative projects, entertainment and new opportunities.",
+    "sameAs": [
+      "https://x.com/ProtektZebrand",
+      "https://www.linkedin.com/company/ProtektZebrand/",
+      "https://web.facebook.com/profile.php?id=61596602848710"
+    ]
+  }
+  </script>
+
+  <!-- =====================================
+       STRUCTURED DATA: WEBSITE
+  ====================================== -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://pzb.driflare.com/#website",
+    "name": "PZB",
+    "alternateName": [
+      "PZB Studios",
+      "Protekt Ze Brand",
+      "ProtektZeBrand"
+    ],
+    "url": "https://pzb.driflare.com/",
+    "description": "The official website of PZB — Protekt Ze Brand and PZB Studios.",
+    "inLanguage": "en",
+    "publisher": {
+      "@id": "https://pzb.driflare.com/#organization"
+    }
+  }
+  </script>
+
+  <!-- =====================================
+       DESIGN SYSTEM
+  ====================================== -->
+
   <style>
+
     :root {
       --black: #111713;
-      --gray: #777e79;
       --green: #16864b;
-      --light: #f6f8f6;
-      --border: #e9ede9;
+      --green-dark: #116b3b;
+      --gray: #777f79;
+      --light: #f6f9f6;
+      --border: #e8eee9;
+      --white: #ffffff;
     }
 
     * {
@@ -41,7 +131,7 @@
 
     body {
       min-height: 100vh;
-      background: #fff;
+      background: var(--white);
       color: var(--black);
       font-family: 'DM Sans', sans-serif;
       display: flex;
@@ -49,32 +139,52 @@
       overflow-x: hidden;
     }
 
-    /* Background details */
+    ::selection {
+      background: #d9f0df;
+      color: var(--green-dark);
+    }
+
+    /* Background */
+
     .ambient {
       position: fixed;
-      width: 450px;
-      height: 450px;
-      background: radial-gradient(
-        circle,
-        rgba(22, 134, 75, .055),
-        transparent 70%
-      );
-      top: 15%;
+      width: 650px;
+      height: 650px;
+      top: 10%;
       left: 50%;
       transform: translateX(-50%);
+      background: radial-gradient(
+        circle,
+        rgba(22,134,75,.075),
+        rgba(22,134,75,.015) 45%,
+        transparent 70%
+      );
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .grid-background {
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(20,50,30,.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(20,50,30,.018) 1px, transparent 1px);
+      background-size: 55px 55px;
+      mask-image: linear-gradient(to bottom, black, transparent 75%);
       pointer-events: none;
       z-index: 0;
     }
 
     /* Navigation */
+
     nav {
       width: 100%;
       max-width: 1250px;
       margin: auto;
-      padding: 28px 35px;
+      padding: 27px 35px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       position: relative;
       z-index: 2;
       animation: fadeDown .8s ease both;
@@ -83,58 +193,62 @@
     .brand {
       display: flex;
       align-items: center;
-      gap: 11px;
+      gap: 12px;
       text-decoration: none;
       color: var(--black);
     }
 
     .brand img {
-      width: 39px;
-      height: 39px;
+      width: 43px;
+      height: 43px;
       object-fit: contain;
+      transition: transform .4s ease;
+    }
+
+    .brand:hover img {
+      transform: rotate(-7deg) scale(1.06);
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
     }
 
     .brand-name {
       font-family: 'Manrope', sans-serif;
-      font-size: 16px;
+      font-size: 17px;
       font-weight: 800;
-      letter-spacing: -.7px;
+      letter-spacing: -.8px;
     }
 
     .brand-name span {
       color: var(--green);
     }
 
-    .status {
-      display: flex;
-      align-items: center;
-      gap: 9px;
-      padding: 9px 15px;
-      background: #f6faf7;
-      border: 1px solid #e6f0e8;
-      border-radius: 30px;
-      color: #32724c;
-      font-size: 11px;
+    .brand-subtitle {
+      font-size: 9px;
+      color: #858d87;
       font-weight: 700;
-      letter-spacing: .5px;
+      letter-spacing: 1.5px;
     }
 
-    .status-dot {
-      height: 7px;
-      width: 7px;
-      border-radius: 50%;
-      background: #25a45e;
-      box-shadow: 0 0 0 4px rgba(37,164,94,.10);
-      animation: pulse 2s infinite;
+    .nav-right {
+      color: var(--gray);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.3px;
+      text-transform: uppercase;
     }
 
-    /* Main section */
+    /* Main */
+
     main {
       flex: 1;
       display: flex;
-      align-items: center;
       justify-content: center;
-      padding: 70px 24px 100px;
+      align-items: center;
+      padding: 75px 24px 100px;
       position: relative;
       z-index: 1;
     }
@@ -145,131 +259,213 @@
       text-align: center;
     }
 
-    .eyebrow {
+    /* Offline status */
+
+    .offline-label {
       display: inline-flex;
       align-items: center;
-      gap: 9px;
-      color: var(--green);
-      background: #f3f9f4;
+      gap: 10px;
       padding: 10px 16px;
-      border-radius: 30px;
-      font-size: 11px;
+      border: 1px solid #f0e8dc;
+      background: #fdfaf5;
+      color: #8b6b3e;
+      border-radius: 40px;
+      font-size: 10px;
       font-weight: 800;
-      letter-spacing: 1.6px;
+      letter-spacing: 1.4px;
       text-transform: uppercase;
       margin-bottom: 34px;
       animation: fadeUp .8s .1s both;
     }
 
-    .eyebrow svg {
-      width: 14px;
-      height: 14px;
+    .offline-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #d39a43;
+      box-shadow: 0 0 0 4px rgba(211,154,67,.12);
+    }
+
+    /* Headline */
+
+    .eyebrow {
+      color: var(--green);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2.3px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+      animation: fadeUp .8s .2s both;
     }
 
     h1 {
       font-family: 'Manrope', sans-serif;
-      font-size: clamp(43px, 7.5vw, 79px);
+      font-size: clamp(43px, 7.5vw, 78px);
       line-height: 1.12;
       font-weight: 800;
       letter-spacing: -4px;
-      animation: fadeUp .9s .2s both;
+      animation: fadeUp .9s .3s both;
     }
 
-    h1 .highlight {
+    .highlight {
+      display: inline-block;
       color: var(--green);
-      display: inline-block;
+      transition: opacity .35s ease, transform .35s ease;
     }
 
-    .animated-word {
-      display: inline-block;
-      min-width: 200px;
-      transition: opacity .3s, transform .3s;
-    }
-
-    .animated-word.out {
+    .highlight.out {
       opacity: 0;
-      transform: translateY(12px);
+      transform: translateY(10px);
     }
 
     .description {
-      max-width: 540px;
+      max-width: 575px;
       margin: 27px auto 0;
       color: var(--gray);
-      font-size: 16px;
-      line-height: 1.9;
+      font-size: 15px;
+      line-height: 1.95;
       animation: fadeUp .9s .4s both;
     }
 
-    /* Creator message */
-    .creator-note {
+    /* Reinnovation card */
+
+    .reinnovation-card {
+      max-width: 570px;
+      margin: 40px auto 0;
+      padding: 23px;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 11px;
-      max-width: 490px;
-      margin: 36px auto 0;
-      padding: 17px 20px;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      background: rgba(255,255,255,.85);
+      align-items: flex-start;
+      gap: 17px;
       text-align: left;
+      border: 1px solid var(--border);
+      border-radius: 19px;
+      background: rgba(255,255,255,.82);
+      box-shadow: 0 15px 50px rgba(25,65,35,.045);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
       animation: fadeUp .9s .55s both;
     }
 
-    .creator-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 11px;
-      background: #eff7f1;
+    .reinnovation-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 55px rgba(25,65,35,.08);
+      border-color: #d6e8da;
+    }
+
+    .card-icon {
+      width: 44px;
+      height: 44px;
+      flex-shrink: 0;
       display: grid;
       place-items: center;
-      flex-shrink: 0;
+      background: #eff8f1;
       color: var(--green);
+      border-radius: 13px;
     }
 
-    .creator-icon svg {
-      width: 18px;
-      height: 18px;
+    .card-icon svg {
+      width: 21px;
+      height: 21px;
     }
 
-    .creator-text {
-      font-size: 12px;
+    .card-content h2 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 14px;
+      font-weight: 800;
+      margin-bottom: 7px;
+    }
+
+    .card-content p {
       color: var(--gray);
-      line-height: 1.7;
+      font-size: 12px;
+      line-height: 1.9;
     }
 
-    .creator-text strong {
+    /* Team message */
+
+    .team-message {
+      max-width: 550px;
+      margin: 29px auto 0;
+      animation: fadeUp .9s .65s both;
+    }
+
+    .team-message h2 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 7px;
+    }
+
+    .team-message p {
+      color: #858d87;
+      font-size: 12px;
+      line-height: 1.9;
+    }
+
+    .team-message strong {
       color: var(--black);
+    }
+
+    /* Hashtags */
+
+    .hashtags {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 27px;
+      animation: fadeUp .9s .7s both;
+    }
+
+    .hashtags span {
+      padding: 8px 12px;
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      color: #6c776f;
+      background: rgba(255,255,255,.7);
+      font-size: 10px;
       font-weight: 700;
+      transition: all .25s ease;
+    }
+
+    .hashtags span:hover {
+      color: var(--green);
+      background: #f1f8f2;
+      border-color: #d8eadd;
+      transform: translateY(-2px);
     }
 
     /* Bottom message */
+
     .bottom-message {
       margin-top: 39px;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
-      color: #9ba19c;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 1px;
+      color: #929a94;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.7px;
       text-transform: uppercase;
-      animation: fadeUp 1s .7s both;
+      animation: fadeUp 1s .8s both;
     }
 
     .bottom-message svg {
-      width: 15px;
-      height: 15px;
+      width: 16px;
+      height: 16px;
       color: var(--green);
     }
 
     /* Footer */
+
     footer {
       width: 100%;
       max-width: 1250px;
       margin: auto;
-      padding: 25px 35px;
+      padding: 24px 35px;
       border-top: 1px solid var(--border);
       display: flex;
       align-items: center;
@@ -281,7 +477,7 @@
 
     .copyright {
       font-size: 11px;
-      color: #969d97;
+      color: #929a94;
     }
 
     .copyright strong {
@@ -295,15 +491,15 @@
     }
 
     .socials a {
-      width: 39px;
-      height: 39px;
+      width: 40px;
+      height: 40px;
       border: 1px solid var(--border);
       border-radius: 12px;
       display: grid;
       place-items: center;
       color: #424a44;
-      transition: .25s ease;
       text-decoration: none;
+      transition: all .25s ease;
     }
 
     .socials a:hover {
@@ -320,11 +516,13 @@
     }
 
     /* Animations */
+
     @keyframes fadeUp {
       from {
         opacity: 0;
         transform: translateY(22px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
@@ -336,202 +534,403 @@
         opacity: 0;
         transform: translateY(-12px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
       }
     }
 
-    @keyframes pulse {
-      50% { box-shadow: 0 0 0 7px rgba(37,164,94,.04); }
-    }
-
     /* Mobile */
+
     @media (max-width: 600px) {
+
       nav {
-        padding: 22px 20px;
+        padding: 21px 20px;
       }
 
-      .status {
-        font-size: 9px;
-        padding: 8px 11px;
+      .brand img {
+        width: 36px;
+        height: 36px;
       }
 
-      main {
-        padding: 65px 22px 85px;
-      }
-
-      h1 {
-        font-size: clamp(43px, 12vw, 61px);
-        letter-spacing: -2.8px;
-      }
-
-      .animated-word {
-        min-width: 0;
-      }
-
-      .description {
+      .brand-name {
         font-size: 14px;
       }
 
-      .creator-note {
-        padding: 14px;
+      .brand-subtitle {
+        font-size: 8px;
+      }
+
+      .nav-right {
+        font-size: 8px;
+        letter-spacing: .7px;
+      }
+
+      main {
+        padding: 65px 21px 75px;
+      }
+
+      h1 {
+        font-size: clamp(42px, 11.5vw, 59px);
+        letter-spacing: -2.8px;
+      }
+
+      .description {
+        font-size: 13px;
+      }
+
+      .reinnovation-card {
+        padding: 18px;
+        gap: 13px;
+      }
+
+      .card-content p {
+        font-size: 11px;
+      }
+
+      .bottom-message {
+        font-size: 9px;
+        letter-spacing: 1px;
       }
 
       footer {
-        padding: 20px;
+        padding: 21px;
         flex-direction: column;
         text-align: center;
       }
     }
 
+    /* Reduced motion accessibility */
+
     @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
+      *,
+      *::before,
+      *::after {
         animation-duration: .01ms !important;
         animation-iteration-count: 1 !important;
-        scroll-behavior: auto !important;
         transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
       }
     }
+
   </style>
 </head>
 
 <body>
 
   <div class="ambient"></div>
+  <div class="grid-background"></div>
 
-  <!-- Navigation -->
+  <!-- =====================================
+       NAVIGATION
+  ====================================== -->
+
   <nav>
-    <a href="#" class="brand">
-      <img src="https://raw.githubusercontent.com/trueshako/pzb/main/pzb-logo.png"
-           alt="PZB Logo">
-      <div class="brand-name">PROTEKT <span>ZE BRAND.</span></div>
+
+    <a href="/" class="brand" aria-label="PZB Studios home">
+
+      <img
+        src="https://raw.githubusercontent.com/trueshako/pzb/main/pzb-logo.png"
+        alt="PZB logo"
+      >
+
+      <div class="brand-text">
+
+        <div class="brand-name">
+          PZB <span>STUDIOS.</span>
+        </div>
+
+        <div class="brand-subtitle">
+          PROTEKT ZE BRAND
+        </div>
+
+      </div>
+
     </a>
 
-    <div class="status">
-      <span class="status-dot"></span>
-      SOMETHING IS BREWING
+    <div class="nav-right">
+      A New Chapter
     </div>
+
   </nav>
 
-  <!-- Main -->
+  <!-- =====================================
+       MAIN CONTENT
+  ====================================== -->
+
   <main>
+
     <section class="hero">
 
+      <div class="offline-label">
+
+        <span class="offline-dot"></span>
+
+        PZB IS CURRENTLY OFFLINE
+
+      </div>
+
       <div class="eyebrow">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 3l1.9 5.8L20 11l-6.1 2.2L12 19l-2-5.8L4 11l6-2.2L12 3z"/>
-          <path d="M19 16l1 2 2 1-2 1-1 2-1-2-2-1 2-1 1-2z"/>
-        </svg>
-        A NEW CHAPTER IS COMING
+        PROTEKT ZE BRAND · PZB STUDIOS
       </div>
 
       <h1>
-        We're building<br>
-        something <span class="highlight animated-word" id="word">bigger.</span>
+
+        We're not stopping.<br>
+
+        We're
+
+        <span class="highlight" id="animatedWord">
+          reimagining.
+        </span>
+
       </h1>
 
       <p class="description">
-        Protekt Ze Brand is taking its time to build something
-        meaningful. A new vision, a new direction and a whole
-        new chapter. We're working behind the scenes to give
-        PZB the value it deserves.
+
+        PZB is currently undergoing a period of reinnovation.
+
+        We are taking a step back to rethink, restructure
+        and rebuild what Protekt Ze Brand represents.
+
         <br><br>
-        The next chapter is worth the wait.
+
+        Through PZB Studios and our wider vision, we are
+        working behind the scenes to create something
+        stronger, more meaningful and more valuable.
+
+        <br><br>
+
+        This is not the end. It is the beginning of a new chapter.
+
       </p>
 
-      <!-- Creator message -->
-      <div class="creator-note">
-        <div class="creator-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-               stroke-width="1.8" stroke-linecap="round">
-            <circle cx="12" cy="8" r="4"/>
-            <path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/>
+      <!-- Reinnovation card -->
+
+      <div class="reinnovation-card">
+
+        <div class="card-icon">
+
+          <svg viewBox="0 0 24 24"
+               fill="none"
+               stroke="currentColor"
+               stroke-width="1.8"
+               stroke-linecap="round"
+               stroke-linejoin="round">
+
+            <path d="M12 3v3"/>
+            <path d="M12 18v3"/>
+            <path d="M3 12h3"/>
+            <path d="M18 12h3"/>
+            <path d="M5.6 5.6l2.1 2.1"/>
+            <path d="M16.3 16.3l2.1 2.1"/>
+            <path d="M18.4 5.6l-2.1 2.1"/>
+            <path d="M7.7 16.3l-2.1 2.1"/>
+            <circle cx="12" cy="12" r="4"/>
+
           </svg>
+
         </div>
 
-        <div class="creator-text">
-          <strong>A note from the creator</strong><br>
-          I'm taking the time to rethink, rebuild and give
-          PZB more value. Great things deserve a strong foundation.
+        <div class="card-content">
+
+          <h2>
+            We're reinnovating PZB.
+          </h2>
+
+          <p>
+
+            We are reviewing our direction, refining our ideas
+            and rebuilding our foundation. Our focus is to give
+            PZB greater purpose, stronger creative direction,
+            better experiences and real value.
+
+            We are not rushing the process. We are building
+            with intention.
+
+          </p>
+
         </div>
+
       </div>
 
+      <!-- Message from the team -->
+
+      <div class="team-message">
+
+        <h2>
+          A message from the PZB team
+        </h2>
+
+        <p>
+
+          We appreciate everyone who has been part of this
+          journey. We are putting in our best efforts to make
+          the next chapter worth it.
+
+          Every step matters, and we believe that great things
+          deserve a strong foundation.
+
+          Thank you for being part of the story.
+
+        </p>
+
+      </div>
+
+      <!-- Official hashtags -->
+
+      <div class="hashtags">
+
+        <span>#PZB</span>
+        <span>#ProtektZeBrand</span>
+        <span>#PZBstudios</span>
+
+      </div>
+
+      <!-- Bottom message -->
+
       <div class="bottom-message">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-             stroke-width="1.8" stroke-linecap="round">
-          <path d="M12 3v18M3 12h18"/>
+
+        <svg viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="1.8"
+             stroke-linecap="round"
+             stroke-linejoin="round">
+
+          <path d="M12 3v18"/>
+          <path d="M3 12h18"/>
+
         </svg>
-        STAY TUNED. THE STORY ISN'T OVER.
+
+        THE STORY CONTINUES. STAY TUNED.
+
       </div>
 
     </section>
+
   </main>
 
-  <!-- Footer -->
+  <!-- =====================================
+       FOOTER
+  ====================================== -->
+
   <footer>
+
     <div class="copyright">
-      © <span id="year"></span> <strong>Protekt Ze Brand.</strong>
+
+      © <span id="year"></span>
+
+      <strong> PZB — Protekt Ze Brand.</strong>
+
       All rights reserved.
+
     </div>
 
     <div class="socials">
 
       <!-- X -->
+
       <a href="https://x.com/ProtektZebrand"
-         target="_blank" rel="noopener noreferrer"
+         target="_blank"
+         rel="noopener noreferrer"
          aria-label="PZB on X">
+
         <svg viewBox="0 0 24 24">
+
           <path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3L12 14.6 5.5 22H2.4l7.3-8.4L1.8 2h6.4l4.5 6.7L18.9 2zm-1.1 18h1.7L7.3 3.9H5.5L17.8 20z"/>
+
         </svg>
+
       </a>
 
       <!-- LinkedIn -->
+
       <a href="https://www.linkedin.com/company/ProtektZebrand/"
-         target="_blank" rel="noopener noreferrer"
+         target="_blank"
+         rel="noopener noreferrer"
          aria-label="PZB on LinkedIn">
+
         <svg viewBox="0 0 24 24">
+
           <path d="M20.4 2H3.6C2.7 2 2 2.7 2 3.6v16.8c0 .9.7 1.6 1.6 1.6h16.8c.9 0 1.6-.7 1.6-1.6V3.6c0-.9-.7-1.6-1.6-1.6zM8 19H5V9h3v10zM6.5 7.7a1.7 1.7 0 1 1 0-3.4 1.7 1.7 0 0 1 0 3.4zM19 19h-3v-4.9c0-1.2 0-2.7-1.7-2.7s-2 1.3-2 2.6V19H9V9h3v1.4c.4-.8 1.3-1.7 2.9-1.7 3.1 0 3.7 2 3.7 4.6V19z"/>
+
         </svg>
+
+      </a>
+
+      <!-- Facebook -->
+
+      <a href="https://web.facebook.com/profile.php?id=61596602848710"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="PZB on Facebook">
+
+        <svg viewBox="0 0 24 24">
+
+          <path d="M13.5 22v-8.9h3l.45-3.5H13.5V7.36c0-1.01.28-1.7 1.74-1.7H17V2.52C16.7 2.48 15.64 2.4 14.4 2.4c-2.9 0-4.9 1.77-4.9 5.02V9.6H6.4v3.5h3.1V22z"/>
+
+        </svg>
+
       </a>
 
     </div>
+
   </footer>
 
+  <!-- =====================================
+       JAVASCRIPT
+  ====================================== -->
+
   <script>
-    // Dynamic year
+
+    // Dynamic copyright year
+
     document.getElementById("year").textContent =
       new Date().getFullYear();
 
-    // Animated words
+
+    // Animated headline
+
     const words = [
-      "bigger.",
-      "better.",
-      "meaningful.",
-      "different.",
-      "extraordinary."
+      "reimagining.",
+      "rebuilding.",
+      "evolving.",
+      "redefining.",
+      "innovating."
     ];
 
-    const wordElement = document.getElementById("word");
-    const reduceMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
+    const wordElement =
+      document.getElementById("animatedWord");
+
+    const reduceMotion =
+      window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
 
     if (!reduceMotion) {
+
       let current = 0;
 
       setInterval(() => {
+
         wordElement.classList.add("out");
 
         setTimeout(() => {
-          current = (current + 1) % words.length;
-          wordElement.textContent = words[current];
-          wordElement.classList.remove("out");
-        }, 300);
 
-      }, 2400);
+          current = (current + 1) % words.length;
+
+          wordElement.textContent = words[current];
+
+          wordElement.classList.remove("out");
+
+        }, 350);
+
+      }, 2800);
+
     }
+
   </script>
 
 </body>
